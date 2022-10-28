@@ -1,0 +1,94 @@
+.ul-list-eachstate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Confirmed {
+    color: #FF073A;
+    background-color: #331427;
+    border-radius: 12px;
+    padding: 20px 100px;
+    width: 24%;
+}
+
+.Active {
+    color: #007BFF;
+    background-color: #007bff2c;
+    border-radius: 12px;
+    padding: 20px 100px;
+    width: 24%;
+}
+
+.Recovered {
+    color: #28A745;
+    background-color: #28a7463e;
+    border-radius: 12px;
+    padding: 20px 100px;
+    width: 24%;
+}
+
+.Deceased {
+    color: #6C757D;
+    background-color: #6c757d37;
+    border-radius: 12px;
+    padding: 20px 100px;
+    width: 24%;
+}
+
+.stats-icon {
+    height: 40px;
+    width: 40px;
+}
+
+@media screen and (max-width: 560px) {
+    .Confirmed {
+        color: #FF073A;
+        background-color: #331427;
+        border-radius: 12px;
+        padding: 10px 50px;
+        width: 48%;
+    }
+
+    .Active {
+        color: #007BFF;
+        background-color: #007bff2c;
+        border-radius: 12px;
+        padding: 10px 50px;
+        width: 48%;
+    }
+
+    .Recovered {
+        color: #28A745;
+        background-color: #28a7463e;
+        border-radius: 12px;
+        padding: 10px 50px;
+        width: 48%;
+        margin-top: 20px;
+    }
+
+    .Deceased {
+        color: #6C757D;
+        background-color: #6c757d37;
+        border-radius: 12px;
+        padding: 10px 50px;
+        width: 48%;
+        margin-top: 20px;
+    }
+
+    .stats-icon {
+        height: 40px;
+        width: 40px;
+    }
+}

@@ -1,0 +1,28 @@
+.list-all-cases{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.states-container-home{
+    width: 25%;
+
+}
+.home-columns{
+    width: 25%;
+    text-align: center;
+}
+.confirmed-home{
+    color: #FF073A;
+}
+.active-home{
+    color: #007BFF;
+}
+.recovered-home{
+    color: #28A745 ;
+}
+.deceased-home{
+    color: #6C757D ;
+}
+.population-home{
+    color: #94A3B8;
+}

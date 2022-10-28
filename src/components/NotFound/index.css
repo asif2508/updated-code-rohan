@@ -1,0 +1,36 @@
+.container-not-found{
+    background-color: #161625;
+    
+}
+
+.not-found-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 150px;
+}
+.not-found-title{
+    margin-bottom: 15px;
+}
+.not-found-para{
+    text-align: center;
+}
+.home-button{
+    color: white;
+    background-color: #2563EB;
+    border: 0;
+    cursor: pointer;
+    padding: 7px 12px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+
+@media screen and (max-width: 560px) {
+    .not-found-image{
+        height: 140px;
+        width: 200px;
+    }
+}

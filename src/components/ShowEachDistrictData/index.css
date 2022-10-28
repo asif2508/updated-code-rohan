@@ -1,0 +1,15 @@
+.list-style{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    margin-left: 5%;
+    color: #94A3B8;
+}
+.district-numbers{
+    font-size: 1.1rem;
+}
+.district-name{
+    margin-left: 20px;
+    font-size: .9rem;
+}

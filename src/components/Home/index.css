@@ -1,0 +1,142 @@
+.search-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+.suggestions{
+    width: 79%;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+
+}
+.input-div{
+    position: relative;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.search-bar{
+    width: 82%;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size: 17px;
+    padding: 15px 50px;
+    outline: 0;
+    border: 0;
+    background-color: #2F2F43;
+    color: #94A3B8;
+}
+.search-result-container{
+    list-style-type: none;
+}
+.search-bar:focus{
+    outline: 0;
+    border: 0;
+}
+.search-icon{
+    position: absolute;
+    color: #94A3B8;
+    top: 35%;
+    left: 11%;
+}
+
+.country-stats{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.stats-block-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.stats-title{
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.stats-number{
+    font-weight: bold;
+}
+.stats-icon{
+    margin-bottom: 15px;
+}
+.red{
+    color: #FF073A;
+}
+.blue{
+    color: #007BFF;
+}
+.green{
+    color: #28A745 ;
+}
+.gray{
+    color: #6C757D ;
+}
+.all-states-table{
+    background-color: #475569;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-top: 100px;
+
+}
+
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.order-icon{
+    color: #475569 !important;
+}
+.other-tables-bar{
+    width: 200px;
+    text-align: center;
+}
+.state-name-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.table-header-title{
+    margin-right: 5px;
+}
+.order{
+    background-color: #475569;
+    border: 0;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.other-tables{
+    padding-left: 9px;
+}
+.products-details-loader-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 560px) {
+    .responsivetable{
+        overflow-x: scroll;
+    }
+    .country-stats{
+        flex-wrap: wrap;
+    }
+    .stats-block-column{
+        width: 50%;
+    }
+}

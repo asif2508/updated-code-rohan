@@ -1,0 +1,15 @@
+.main-container{
+    background-color: #161625;
+    color: white;
+}
+.container{
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+.about-description{
+    color: #94A3B8;
+}
+.about-vaccine-title{
+    font-size: 1.2rem;
+}

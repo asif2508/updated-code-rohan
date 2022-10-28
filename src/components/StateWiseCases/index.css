@@ -1,0 +1,71 @@
+.state-details{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.state-name-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.state-name-container{
+    background-color: #0285c739;
+    padding: 6px 14px;
+    border-radius: 15px;
+    color: #0EA5E9;
+}
+.last-date{
+    margin-top: 0;
+}
+.name-state-para{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.testno-container{
+    color: #94A3B8;
+}
+.test-title{
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.testno{
+    font-weight: bold;
+}
+.graphs-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.barchart-style{
+    width: 100%;
+    margin-top: 100px;
+    color: #FF073A;
+    background-color: #331427;
+}
+
+.line-graphs-section{
+    margin-top: 100px;
+}
+.districts-container{
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+@media screen and (max-width: 560px) {
+    .state-name-container{
+        font-size: 18px;
+    }
+    .test-title{
+        margin-bottom: 2px;
+    }
+    .testno{
+        margin-top: 0;
+    }
+    .districts-container{
+        max-height: 1200px;
+    }
+
+}
