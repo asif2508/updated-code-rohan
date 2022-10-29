@@ -2,7 +2,6 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import {BsSearch} from 'react-icons/bs'
 import {FcGenericSortingAsc, FcGenericSortingDesc} from 'react-icons/fc'
-// eslint-disable-next-line import/no-named-as-default
 import Header from '../Header'
 import Footer from '../Footer'
 import TotalStats from '../TotalStats'
@@ -239,17 +238,17 @@ class Home extends Component {
 
     return (
       <>
-        <div id="countryWideConfirmedCases" className="stats-block-column">
+        <div testid="countryWideConfirmedCases" className="stats-block-column">
           <p className="stats-title red">Confirmed</p>
           <img
-            src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666595955/Group_ezjlx5.png "
+            src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666595955/Group_ezjlx5.png"
             className="stats-icon"
             alt="country wide confirmed cases pic"
           />
 
           <p className="stats-number red">{totalConfirmedCases}</p>
         </div>
-        <div id="countryWideActiveCases" className="stats-block-column">
+        <div testid="countryWideActiveCases" className="stats-block-column">
           <p className="stats-title blue">Active</p>
           <img
             src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666595955/protection_2_ljlejt.png"
@@ -258,7 +257,7 @@ class Home extends Component {
           />
           <p className="stats-number blue">{totalActiveCases}</p>
         </div>
-        <div id="countryWideRecoveredCases" className="stats-block-column">
+        <div testid="countryWideRecoveredCases" className="stats-block-column">
           <p className="stats-title green">Recovered</p>
           <img
             src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666595955/recovered_1_s3isii.png"
@@ -267,10 +266,10 @@ class Home extends Component {
           />
           <p className="stats-number green">{totalRecoveredCases}</p>
         </div>
-        <div id="countryWideDeceasedCases" className="stats-block-column ">
+        <div testid="countryWideDeceasedCases" className="stats-block-column ">
           <p className="stats-title gray">Deceased</p>
           <img
-            src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666595955/Outline_vstiok.png "
+            src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666595955/Outline_vstiok.png"
             className="stats-icon"
             alt="country wide deceased cases pic"
           />
@@ -281,7 +280,7 @@ class Home extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="products-details-loader-container" id="homeRouteLoader">
+    <div className="products-details-loader-container" testid="homeRouteLoader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
@@ -310,51 +309,49 @@ class Home extends Component {
     const {statesinfo} = this.state
 
     return (
-      <div className="all-states-table" id="stateWiseCovidDataTable">
-        <div className="responsivetable">
-          <div className="table-header">
-            <div className="state-name-heading">
-              <p className="table-header-title ">States/UT</p>
-              <button
-                className="order"
-                type="button"
-                id="ascendingSort"
-                onClick={this.whenAscendingSortButtonClicked}
-              >
-                <FcGenericSortingAsc className="order-icon" />
-              </button>
-              <button
-                className="order"
-                type="button"
-                id="descendingSort"
-                onClick={this.whenDescendingSortButtonClicked}
-              >
-                <FcGenericSortingDesc className="order-icon" />
-              </button>
-            </div>
-            <div className="other-tables-bar">
-              <p className="table-header-title">Confirmed</p>
-            </div>
-            <div className="other-tables-bar">
-              <p className="table-header-title">Active</p>
-            </div>
-            <div className="other-tables-bar">
-              <p className="table-header-title">Recovered</p>
-            </div>
-            <div className="other-tables-bar">
-              <p className="table-header-title">Deceased</p>
-            </div>
-            <div className="other-tables-bar">
-              <p className="table-header-title">Population</p>
-            </div>
+      <div className="all-states-table" testid="stateWiseCovidDataTable">
+        <div className="table-header">
+          <div className="state-name-heading">
+            <p className="table-header-title ">States/UT</p>
+            <button
+              className="order"
+              type="button"
+              testid="ascendingSort"
+              onClick={this.whenAscendingSortButtonClicked}
+            >
+              <FcGenericSortingAsc className="order-icon" />
+            </button>
+            <button
+              className="order"
+              type="button"
+              testid="descendingSort"
+              onClick={this.whenDescendingSortButtonClicked}
+            >
+              <FcGenericSortingDesc className="order-icon" />
+            </button>
           </div>
-          <div className="state-wise-data-container">
-            <ul className="other-tables">
-              {statesinfo.map(each => (
-                <TotalStats key={each.stateCode} data={each} />
-              ))}
-            </ul>
+          <div className="other-tables-bar">
+            <p className="table-header-title">Confirmed</p>
           </div>
+          <div className="other-tables-bar">
+            <p className="table-header-title">Active</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="table-header-title">Recovered</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="table-header-title">Deceased</p>
+          </div>
+          <div className="other-tables-bar">
+            <p className="table-header-title">Population</p>
+          </div>
+        </div>
+        <div className="state-wise-data-container">
+          <ul className="other-tables">
+            {statesinfo.map(each => (
+              <TotalStats key={each.stateCode} data={each} />
+            ))}
+          </ul>
         </div>
       </div>
     )
@@ -376,7 +373,10 @@ class Home extends Component {
     const {filteredSearchList} = this.state
 
     return (
-      <ul className="search-result-container" id="searchResultsUnorderedList">
+      <ul
+        className="search-result-container"
+        testid="searchResultsUnorderedList"
+      >
         {filteredSearchList.map(each => (
           <SearchResult
             key={each.state_code}
@@ -403,13 +403,12 @@ class Home extends Component {
         <Header />
         <div className="container">
           <div className="search-container">
-            <BsSearch id="searchIcon" className="search-icon" />
+            <BsSearch testid="searchIcon" className="search-icon" />
             <input
               type="search"
               placeholder="Enter the State"
               className="search-bar"
               onChange={this.searchStarted}
-              // eslint-disable-next-line react/no-unknown-property
               onAbort={this.removeFilteredList}
             />
           </div>

@@ -8,11 +8,9 @@ import {
   Legend,
   BarChart,
   Bar,
-  ResponsiveContainer,
 } from 'recharts'
 import Loader from 'react-loader-spinner'
 import './index.css'
-import Footer from '../Footer'
 
 class ChartsData extends Component {
   state = {
@@ -72,7 +70,10 @@ class ChartsData extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="products-details-loader-container" id="timelinesDataLoader">
+    <div
+      className="products-details-loader-container"
+      testid="timelinesDataLoader"
+    >
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
@@ -98,28 +99,26 @@ class ChartsData extends Component {
 
     return (
       <div className="chart-wrapper">
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart width={800} height={300} data={toptendata} barSize={45}>
-            <XAxis
-              dataKey="date"
-              stroke={`${colortype}`}
-              style={{
-                fontFamily: 'Roboto',
-                fontWeight: 500,
-                textTransform: 'uppercase',
-              }}
-              dy={10}
-            />
-            <Tooltip />
-            <Legend />
-            <Bar
-              dataKey={`${barChartType}`}
-              fill={`${colortype}`}
-              label={{position: 'top', fill: '#fff'}}
-              radius={[8, 8, 0, 0]}
-            />
-          </BarChart>
-        </ResponsiveContainer>
+        <BarChart width={800} height={500} data={toptendata} barSize={45}>
+          <XAxis
+            dataKey="date"
+            stroke={`${colortype}`}
+            style={{
+              fontFamily: 'Roboto',
+              fontWeight: 500,
+              textTransform: 'uppercase',
+            }}
+            dy={10}
+          />
+          <Tooltip />
+          <Legend />
+          <Bar
+            dataKey={`${barChartType}`}
+            fill={`${colortype}`}
+            label={{position: 'top', fill: '#fff'}}
+            radius={[8, 8, 0, 0]}
+          />
+        </BarChart>
       </div>
     )
   }
@@ -127,29 +126,27 @@ class ChartsData extends Component {
   graph = (type, color) => {
     const {forOtherChart} = this.state
     return (
-      <div className={type}>
-        <ResponsiveContainer height={300} width="100%">
-          <LineChart
-            width={800}
-            height={300}
-            data={forOtherChart}
-            margin={{top: 5, right: 30, left: 20, bottom: 5}}
-          >
-            <XAxis
-              dataKey="date"
-              style={{
-                fontFamily: 'Roboto',
-                fontWeight: 500,
-                textTransform: 'uppercase',
-              }}
-              dy={10}
-            />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey={type} stroke={color} />
-          </LineChart>
-        </ResponsiveContainer>
+      <div>
+        <LineChart
+          width={800}
+          height={250}
+          data={forOtherChart}
+          margin={{top: 5, right: 30, left: 20, bottom: 5}}
+        >
+          <XAxis
+            dataKey="date"
+            style={{
+              fontFamily: 'Roboto',
+              fontWeight: 500,
+              textTransform: 'uppercase',
+            }}
+            dy={10}
+          />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey={type} stroke={color} />
+        </LineChart>
       </div>
     )
   }
@@ -159,7 +156,7 @@ class ChartsData extends Component {
       <div className="barchart-container">{this.barChart()}</div>
 
       <h1 className="charts-title">Spread Trends</h1>
-      <div id="lineChartsContainer" className="barcharts-container">
+      <div testid="lineChartsContainer" className="barcharts-container">
         <div className="charts confirmed-background">
           {this.graph('confirmed', '#FF073A')}
         </div>
@@ -175,7 +172,6 @@ class ChartsData extends Component {
         <div className="charts tested-background">
           {this.graph('tested', '#9673B9')}
         </div>
-        <Footer />
       </div>
     </>
   )

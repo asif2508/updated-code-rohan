@@ -17,6 +17,14 @@ class About extends Component {
     this.getAllAboutData()
   }
 
+  renderloader = () => (
+    <>
+      <div className="loader-container" testid="aboutRouteLoader">
+        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+      </div>
+    </>
+  )
+
   getAllAboutData = async () => {
     const apiUrl = 'https://apis.ccbp.in/covid19-faqs'
     const options = {
@@ -52,7 +60,7 @@ class About extends Component {
     const {faqData, factsData} = this.state
     return (
       <>
-        <ul id="faqsUnorderedList" className="factlist">
+        <ul testid="faqsUnorderedList" className="factlist">
           {faqData.map(each => (
             <FaqsList
               key={each.qno}
@@ -71,14 +79,6 @@ class About extends Component {
       </>
     )
   }
-
-  renderloader = () => (
-    <>
-      <div className="loader-container" id="aboutRouteLoader">
-        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-      </div>
-    </>
-  )
 
   render() {
     const {isLoading} = this.state

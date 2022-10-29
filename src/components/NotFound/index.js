@@ -7,7 +7,7 @@ const NotFound = () => (
     <Header />
     <div className="not-found-data">
       <img
-        src="https://res.cloudinary.com/du19z1lrd/image/upload/v1666256886/Group_7484_is7kby.png"
+        src="/img/notfound.png"
         alt="not-found-pic"
         className="not-found-image"
       />

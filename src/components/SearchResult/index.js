@@ -6,15 +6,15 @@ const SearchResult = props => {
   const {statename, statecode, id} = props
 
   return (
-    <li className="search-style">
+    <li>
       <Link to={`/state/${id}`} className="link-search">
         <div className="search-result">
-          <p className="search-result-heading font-face-gm">{statename}</p>
+          <h1 className="search-result-heading font-face-gm">{statename}</h1>
 
           <button type="button" className="search-button">
             {statecode}
             <BiChevronRightSquare
-              id="searchResultChevronRightIcon"
+              testid="searchResultChevronRightIcon"
               alt="line icon"
               className="icon-right"
             />

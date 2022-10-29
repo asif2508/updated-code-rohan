@@ -5,10 +5,10 @@ import './index.css'
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div>
       <h1 className="logo">
-        COVID19<span className="india-color">INDIA</span>
-        {/* COVID19INDIA */}
+        {/* COVID19<span className="india">INDIA</span> */}
+        COVID19INDIA
       </h1>
       <p className="tagline">
         we stand with everyone fighting on the front lines

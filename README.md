@@ -144,7 +144,7 @@ The app must have the following functionalities
 
   - Refer to the below Example for the usage of `testid` in the HTML elements
 
-    - Example: `<div id="countryWideConfirmedCases" className="country-wide-confirmed-cases"/>`
+    - Example: `<div testid="countryWideConfirmedCases" className="country-wide-confirmed-cases"/>`
 
   - Get all states data from the response of Get Countrywide covid19 cases API by mapping the state's list that we have provided you in the App.js file
 
@@ -221,7 +221,7 @@ The app must have the following functionalities
   - Example:
 
     ```html
-    <button type="button" id="ascendingSort">
+    <button type="button" testid="ascendingSort">
       <FcGenericSortingDesc />
     </button>
     ```
@@ -475,5 +475,3 @@ If you complete the main features of the project you can try out the below featu
 > - All components you implement should go in the `src/components` directory.
 > - **Do not remove the pre-filled code**
 > - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
-# updated-final-year-project
-# final-year-project

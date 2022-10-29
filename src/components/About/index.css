@@ -1,15 +1,35 @@
-.main-container{
-    background-color: #161625;
-    color: white;
+.about-container {
+  width: 80%;
+  margin-top: 64px;
+  text-align: left;
 }
-.container{
-    padding-left: 5%;
-    padding-right: 5%;
 
+.about-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #f8fafc;
 }
-.about-description{
-    color: #94A3B8;
+.about-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #94a3b8;
 }
-.about-vaccine-title{
-    font-size: 1.2rem;
+.about-vaccine-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #e2e8f0;
+}
+.factlist {
+  margin-top: 32px;
+  padding: 0;
+  list-style-type: none;
 }
